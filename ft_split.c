@@ -6,13 +6,13 @@
 /*   By: 2lazy <2lazy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:17:53 by mapatenk          #+#    #+#             */
-/*   Updated: 2026/04/07 16:14:44 by 2lazy            ###   ########.fr       */
+/*   Updated: 2026/04/08 15:27:25 by 2lazy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(const char *s, char c)
+static size_t	count_words(const char *s, char c)
 {
 	int i;
 	size_t count;
@@ -33,7 +33,7 @@ size_t	count_words(const char *s, char c)
 	return (count);
 }
 
-char	*feel_word(const char *s, char c, int start)
+static char	*feel_word(const char *s, char c, int start)
 {
 	int		i;
 	int		len;
@@ -60,7 +60,7 @@ char	*feel_word(const char *s, char c, int start)
 	return (word);
 }
 
-void	*mem_free(char **arr, int index)
+static void	*mem_free(char **arr, int index)
 {
 	while (index > 0)
 	{

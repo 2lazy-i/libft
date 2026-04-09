@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapatenk <mapatenk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: 2lazy <2lazy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:19:38 by mapatenk          #+#    #+#             */
-/*   Updated: 2024/10/28 13:33:36 by mapatenk         ###   ########.fr       */
+/*   Updated: 2026/04/09 19:19:09 by 2lazy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@
 # include <fcntl.h>
 # include <unistd.h>
 # include <stdint.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -54,4 +60,13 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strtrim(const char *s1, const char *set);
 char	**ft_split(const char *s, char c);
+void 	ft_lstadd_back(t_list **lst, t_list *new);
+void 	ft_lstadd_front(t_list **lst, t_list *new);
+void 	ft_lstclear(t_list **lst, void (*del)(void*));
+void 	ft_lstdelone(t_list *lst, void (*del)(void*));
+void 	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list 	*ft_lstlast(t_list *lst);
+t_list 	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list 	*ft_lstnew(void *content);
+int 	ft_lstsize(t_list *lst);
 #endif
