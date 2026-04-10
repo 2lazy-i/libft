@@ -6,7 +6,7 @@
 /*   By: myapaten <myapaten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 18:36:04 by 2lazy             #+#    #+#             */
-/*   Updated: 2026/04/10 16:18:58 by myapaten         ###   ########.fr       */
+/*   Updated: 2026/04/10 18:52:46 by myapaten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
 	t_list	*new_node;
+	void	*content;
 
 	if (!lst || !f || !del)
 		return (NULL);
 	new_list = NULL;
 	while (lst)
 	{
-		new_node = ft_lstnew(f(lst->content));
+		content = f(lst->content);
+		new_node = ft_lstnew(content);
 		if (new_node == NULL)
 		{
+			del(content);
 			ft_lstclear(&new_list, del);
 			return (NULL);
 		}

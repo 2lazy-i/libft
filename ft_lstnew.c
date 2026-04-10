@@ -6,7 +6,7 @@
 /*   By: myapaten <myapaten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 15:36:38 by 2lazy             #+#    #+#             */
-/*   Updated: 2026/04/10 15:59:02 by myapaten         ###   ########.fr       */
+/*   Updated: 2026/04/10 18:51:35 by myapaten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*list;
+	t_list	*element;
 
-	list = (t_list *)malloc(sizeof(t_list));
-	if (!list)
+	element = malloc(sizeof(t_list));
+	if (!element)
 		return (NULL);
-	list->content = content;
-	list->next = NULL;
-	return (list);
+	element->content = content;
+	element->next = NULL;
+	return (element);
 }
 
 // #include <stdio.h>
