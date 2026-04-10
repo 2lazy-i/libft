@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: 2lazy <2lazy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: myapaten <myapaten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:17:53 by mapatenk          #+#    #+#             */
-/*   Updated: 2026/04/09 20:17:45 by 2lazy            ###   ########.fr       */
+/*   Updated: 2026/04/10 15:37:40 by myapaten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 static size_t	count_words(const char *s, char c)
 {
-	int i;
-	size_t count;
+	int		i;
+	size_t	count;
 
 	count = 0;
 	i = 0;
 	while (s[i])
 	{
-		while(s[i] && s[i] == c)
+		while (s[i] && s[i] == c)
 			i++;
 		if (s[i] && s[i] != c)
 		{
@@ -38,7 +38,7 @@ static char	*feel_word(const char *s, char c, int start)
 	int		i;
 	int		len;
 	char	*word;
-	
+
 	i = start;
 	len = 0;
 	while (s[i] && s[i] != c)
@@ -50,7 +50,7 @@ static char	*feel_word(const char *s, char c, int start)
 	if (!word)
 		return (NULL);
 	i = 0;
-	while(i < len)
+	while (i < len)
 	{
 		word[i] = s[start];
 		i++;
@@ -68,23 +68,23 @@ static void	*mem_free(char **arr, int index)
 		free(arr[index]);
 	}
 	free(arr);
-	return(NULL);
+	return (NULL);
 }
 
 char	**ft_split(const char *s, char c)
 {
-	int i;
-	int j;
-	char **split;
+	int		i;
+	int		j;
+	char	**split;
 
 	split = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!s || !split)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while(s[i])
+	while (s[i])
 	{
-		while(s[i] && s[i] == c)
+		while (s[i] && s[i] == c)
 			i++;
 		if (s[i])
 		{

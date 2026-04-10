@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: 2lazy <2lazy@student.42.fr>                +#+  +:+       +#+        */
+/*   By: myapaten <myapaten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 16:21:58 by 2lazy             #+#    #+#             */
-/*   Updated: 2026/04/08 17:00:49 by 2lazy            ###   ########.fr       */
+/*   Updated: 2026/04/10 15:38:18 by myapaten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    new->next = *lst;
-    *lst = new;
-    return ;
+	new->next = *lst;
+	*lst = new;
+	return ;
 }
