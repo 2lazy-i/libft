@@ -6,15 +6,15 @@
 /*   By: myapaten <myapaten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:19:38 by mapatenk          #+#    #+#             */
-/*   Updated: 2026/04/10 16:01:24 by myapaten         ###   ########.fr       */
+/*   Updated: 2026/04/10 16:19:10 by myapaten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdint.h>
 
 typedef struct s_list
 {
