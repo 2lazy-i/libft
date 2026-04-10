@@ -6,7 +6,7 @@
 /*   By: myapaten <myapaten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 16:21:58 by 2lazy             #+#    #+#             */
-/*   Updated: 2026/04/10 15:38:18 by myapaten         ###   ########.fr       */
+/*   Updated: 2026/04/10 15:48:19 by myapaten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,15 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 	return ;
 }
+
+// #include <stdio.h>
+//
+// int main(void)
+// {
+//     t_list *list = ft_lstnew("second");
+//
+//     ft_lstadd_front(&list, ft_lstnew("first"));
+//
+//     printf("%s -> %s\n", (char *)list->content, (char *)list->next->content);
+//     return (0);
+// }

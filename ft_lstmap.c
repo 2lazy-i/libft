@@ -6,7 +6,7 @@
 /*   By: myapaten <myapaten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 18:36:04 by 2lazy             #+#    #+#             */
-/*   Updated: 2026/04/10 15:38:33 by myapaten         ###   ########.fr       */
+/*   Updated: 2026/04/10 15:58:54 by myapaten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,37 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+//
+// void	*map_f(void *content)
+// {
+// 	return (strdup((char *)content)); // map creates a new string
+// }
+//
+// void	del_f(void *content)
+// {
+// 	free(content);
+// }
+//
+// int	main(void)
+// {
+// 	t_list	*list;
+// 	t_list	*mapped_list;
+// 	t_list	*temp;
+//
+// 	list = ft_lstnew("first");
+// 	list->next = ft_lstnew("second");
+//
+// 	mapped_list = ft_lstmap(list, map_f, del_f);
+//
+// 	temp = mapped_list;
+// 	while (temp)
+// 	{
+// 		printf("%s\n", (char *)temp->content);
+// 		temp = temp->next;
+// 	}
+// 	// Note: in a real scenario you would also free the lists
+// 	return (0);
+// }

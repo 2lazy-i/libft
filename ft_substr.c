@@ -6,7 +6,7 @@
 /*   By: myapaten <myapaten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:23:26 by mapatenk          #+#    #+#             */
-/*   Updated: 2026/04/10 15:41:27 by myapaten         ###   ########.fr       */
+/*   Updated: 2026/04/10 16:00:21 by myapaten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	i = 0;
 	if (start > max)
 		return (ft_strdup(""));
-	if (start + len > max)
+	if (len > max - start)
 		len = max - start;
 	str = malloc((len + 1) * sizeof(char));
 	if (!str)

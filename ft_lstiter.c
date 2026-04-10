@@ -6,7 +6,7 @@
 /*   By: myapaten <myapaten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 18:30:43 by 2lazy             #+#    #+#             */
-/*   Updated: 2026/04/10 15:38:27 by myapaten         ###   ########.fr       */
+/*   Updated: 2026/04/10 15:51:19 by myapaten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,23 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+
+// #include <stdio.h>
+//
+// void	f(void *content)
+// {
+// 	printf("%s\n", (char *)content);
+// }
+//
+// int	main(void)
+// {
+// 	t_list	*list;
+//
+// 	list = ft_lstnew("first");
+// 	list->next = ft_lstnew("second");
+// 	list->next->next = ft_lstnew("third");
+// 	
+// 	printf("Iterating through list:\n");
+// 	ft_lstiter(list, f);
+// 	return (0);
+// }
